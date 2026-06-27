@@ -31,6 +31,7 @@ A production-style conversational RAG API built with **FastAPI**, **Qdrant**, **
 | Validation | Pydantic v2 |
 
 ## Project Structure
+```text
 conversational-rag-api/
 ├── db/
 │   ├── qdrant_client.py     # Qdrant connection + collection init

@@ -1,4 +1,4 @@
-markdown# Conversational RAG API
+# Conversational RAG API
 
 A production-style conversational RAG API built with **FastAPI**, **Qdrant**, **Redis**, and **Ollama** (fully local, no API keys needed).
 

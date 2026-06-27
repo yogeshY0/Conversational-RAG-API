@@ -32,43 +32,24 @@ A production-style conversational RAG API built with **FastAPI**, **Qdrant**, **
 
 ## Project Structure
 conversational-rag-api/
-
-├── main.py                        # FastAPI app + lifespan
-
-├── config.py                      # Settings via pydantic-settings
-
-├── routers/
-|
-│ --  ├── ingest.py                  # POST /ingest
-
-│ --  ├── chat.py                    # POST /chat
-
-│ --  └── booking.py                 # GET /bookings
-
-├── services/
-
-│--   ├── embedder.py                # Chunking + embedding
-
-│-- - ├── retriever.py               # Custom Qdrant vector search
-
-│--   ├── llm.py                     # Prompt builder + LLM caller
-
-│--   ├── memory.py                  # Redis history read/write
-
-│---  └── booking_extractor.py       # LLM-based booking detection
-
 ├── db/
-
-│--   ├── qdrant_client.py           # Qdrant connection + collection init
-
-│ --  └── redis_client.py            # Redis connection + helpers
-
+│   ├── qdrant_client.py     # Qdrant connection + collection init
+│   └── redis_client.py      # Redis connection + helpers
 ├── models/
-
-│ --  └── schemas.py                 # Pydantic request/response models
-
+│   └── schemas.py           # Pydantic request/response models
+├── routers/
+│   ├── booking.py           # GET /bookings
+│   ├── chat.py              # POST /chat
+│   └── ingest.py            # POST /ingest
+├── services/
+│   ├── booking_extractor.py # LLM-based booking detection
+│   ├── embedder.py          # Chunking + embedding
+│   ├── llm.py               # Prompt builder + LLM caller
+│   ├── memory.py            # Redis history read/write
+│   └── retriever.py         # Custom Qdrant vector search
 ├── .env.example
-
+├── config.py                # Settings via pydantic-settings
+├── main.py                  # FastAPI app + lifespan
 └── requirements.txt
 
 ## Setup

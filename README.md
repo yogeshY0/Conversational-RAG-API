@@ -39,33 +39,33 @@ conversational-rag-api/
 
 ├── routers/
 |
-│   ├── ingest.py                  # POST /ingest
+│ --  ├── ingest.py                  # POST /ingest
 
-│   ├── chat.py                    # POST /chat
+│ --  ├── chat.py                    # POST /chat
 
-│   └── booking.py                 # GET /bookings
+│ --  └── booking.py                 # GET /bookings
 
 ├── services/
 
-│   ├── embedder.py                # Chunking + embedding
+│--   ├── embedder.py                # Chunking + embedding
 
-│   ├── retriever.py               # Custom Qdrant vector search
+│-- - ├── retriever.py               # Custom Qdrant vector search
 
-│   ├── llm.py                     # Prompt builder + LLM caller
+│--   ├── llm.py                     # Prompt builder + LLM caller
 
-│   ├── memory.py                  # Redis history read/write
+│--   ├── memory.py                  # Redis history read/write
 
-│   └── booking_extractor.py       # LLM-based booking detection
+│---  └── booking_extractor.py       # LLM-based booking detection
 
 ├── db/
 
-│   ├── qdrant_client.py           # Qdrant connection + collection init
+│--   ├── qdrant_client.py           # Qdrant connection + collection init
 
-│   └── redis_client.py            # Redis connection + helpers
+│ --  └── redis_client.py            # Redis connection + helpers
 
 ├── models/
 
-│   └── schemas.py                 # Pydantic request/response models
+│ --  └── schemas.py                 # Pydantic request/response models
 
 ├── .env.example
 

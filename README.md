@@ -3,29 +3,10 @@
 A production-style conversational RAG API built with **FastAPI**, **Qdrant**, **Redis**, and **Ollama** (fully local, no API keys needed).
 
 ## Architecture
-Client / curl
+<img width="665" height="432" alt="Screenshot 2026-06-27 at 22 43 15" src="https://github.com/user-attachments/assets/71007908-83c7-4ee8-adac-74ee0647c594" />
 
-↓
 
-FastAPI
 
-/ingest · /chat · /bookings
-
-↓
-
-┌─────────────────────────────────────────┐
-
-│              Services                   │
-
-│  Embedder · Retriever · LLM · Booking  │
-
-└─────────────────────────────────────────┘
-
-↓              ↓              ↓
-
-Qdrant          Redis          Ollama
-
-(vectors)    (memory+booking)  (LLM+embed)
 
 ## Features
 
@@ -57,7 +38,7 @@ conversational-rag-api/
 ├── config.py                      # Settings via pydantic-settings
 
 ├── routers/
-
+|
 │   ├── ingest.py                  # POST /ingest
 
 │   ├── chat.py                    # POST /chat

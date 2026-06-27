@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+qdrant-client
+redis
+ollama
+pydantic[email]
+python-dotenv
+pypdf
+python-multipart
